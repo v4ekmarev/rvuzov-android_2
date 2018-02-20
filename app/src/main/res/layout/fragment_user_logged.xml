@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/dummyAvatar"
+        android:layout_width="118dp"
+        android:layout_height="118dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="82dp"
+        android:src="@drawable/userpic"
+        android:tint="@color/gray3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/primaryColor"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/ic_person_white_48dp"
+                    android:tint="@color/blue" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="16dp"
+                    android:hint="@string/name_hint"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    app:met_accentTypeface="fonts/Roboto-Bold.ttf"
+                    app:met_baseColor="@android:color/white"
+                    app:met_floatingLabel="none"
+                    app:met_primaryColor="@color/textLabelColor" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="72dp"
+                android:layout_marginTop="-4dp"
+                android:text="email"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvSelectedUniversity"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/logged_user_search_item_selector"
+                android:clickable="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:singleLine="true"
+                android:textColor="@color/gray2"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvSelectedFaculty"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/logged_user_search_item_selector"
+                android:clickable="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:singleLine="true"
+                android:textColor="@color/gray2"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvSelectedGroup"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="72dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/logged_user_search_item_selector"
+                android:clickable="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:singleLine="true"
+                android:textColor="@color/gray2"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="166dp"
+        android:scaleX="0"
+        android:scaleY="0"
+        app:fab_colorNormal="@color/red"
+        app:fab_colorPressed="@color/red_pressed"
+        app:fab_icon="@drawable/ic_photo_camera_white_24dp" />
+
+    <FrameLayout
+        android:id="@+id/searchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

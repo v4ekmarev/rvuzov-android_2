@@ -1,0 +1,119 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.raspisaniyevuzov.app">
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.gallery3d.permission.GALLERY_PROVIDER" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <application
+        android:name="com.raspisaniyevuzov.app.RVuzovApp"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.RVuzov">
+
+        <activity
+            android:name="com.raspisaniyevuzov.app.ListMyScheduleActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing"
+            android:theme="@style/Theme.RVuzov.Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.raspisaniyevuzov.app.ui.MainActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.RVuzov.Transparent" />
+
+        <activity
+            android:name="com.raspisaniyevuzov.app.ui.auth.DataLoadingActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.RVuzov.Transparent" />
+
+        <activity
+            android:name="com.raspisaniyevuzov.app.ui.schedule.WeekScheduleActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.raspisaniyevuzov.app.ui.schedule.LessonDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.raspisaniyevuzov.app.ui.task.EditTaskActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.RVuzov.FillStatusBar" />
+
+        <activity
+            android:name="com.raspisaniyevuzov.app.ui.task.ViewTaskActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.raspisaniyevuzov.app.ui.auth.AddNewDataActivity"
+            android:theme="@style/Base.Theme.RVuzov"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.raspisaniyevuzov.app.ui.profile.RestorePasswordActivity"
+            android:theme="@style/Base.Theme.RVuzov"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="net.hockeyapp.android.UpdateActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="org.prflr.apikey"
+            android:value="FLvmp5Z7ssZl4vZdCZS8POzdY72Mi7WO@prflr.org:4000" />
+
+        <service
+            android:name="com.raspisaniyevuzov.app.api.SyncService"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.raspisaniyevuzov.app.debug" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.android.gcm.MyGcmListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.android.gcm.MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.adjust.sdk.AdjustReferrerReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

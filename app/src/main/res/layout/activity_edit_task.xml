@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar_actionbar"
+            layout="@layout/toolbar_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvSubjectTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/subject"
+                    android:textAllCaps="true"
+                    android:textColor="@color/textLabelColor"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
+
+                <FrameLayout
+                    android:id="@+id/flSubject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:minHeight="48dp">
+
+                    <TextView
+                        android:id="@+id/tvSubject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:hint="@string/subject_hint"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/ivSubjectIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/ic_add_circle_outline_grey600_24dp"
+                        android:tint="@color/accentColor" />
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/scheduleDividerColor" />
+
+                <TextView
+                    android:id="@+id/tvDateEndTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:textAllCaps="true"
+                    android:text="@string/date_end_hint"
+                    android:textColor="@color/textLabelColor"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
+
+                <FrameLayout
+                    android:id="@+id/flDateEnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true">
+
+                    <TextView
+                        android:id="@+id/tvDateEnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@null"
+                        android:focusable="false"
+                        android:hint="@string/date_end_hint"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/hintColor"
+                        android:textSize="16sp" />
+
+                    <FrameLayout
+                        android:id="@+id/flClearDateEnd"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="4dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="false">
+
+                        <ImageView
+                            android:id="@+id/ivDateIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_query_builder_grey600_24dp"
+                            android:tint="@color/accentColor" />
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/scheduleDividerColor" />
+
+                <EditText
+                    android:id="@+id/edtText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16sp"
+                    android:gravity="top"
+                    android:hint="@string/description"
+                    android:minLines="3"
+                    android:textColorHint="@color/hintColor" />
+
+                <HorizontalScrollView
+                    android:id="@+id/hsvImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp">
+
+                    <LinearLayout
+                        android:id="@+id/llImagesContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/searchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/multiple_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="28dp"
+        android:layout_marginRight="16dp"
+        app:fab_addButtonColorNormal="@color/accentColor"
+        app:fab_addButtonColorPressed="@color/accentColorPressed"
+        app:fab_addButtonPlusIconColor="@android:color/white"
+        app:fab_addButtonSize="mini">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/photoFromGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/accentColor"
+            app:fab_colorPressed="@color/accentColorPressed"
+            app:fab_icon="@drawable/ic_insert_photo_white_24dp" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/photoFromCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/accentColor"
+            app:fab_colorPressed="@color/accentColorPressed"
+            app:fab_icon="@drawable/ic_photo_camera_white_24dp" />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addImageMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        app:fab_colorNormal="@color/accentColor"
+        app:fab_colorPressed="@color/accentColorPressed"
+        app:fab_icon="@drawable/ic_add_to_photos_white_24dp" />
+
+    <FrameLayout
+        android:id="@+id/photoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

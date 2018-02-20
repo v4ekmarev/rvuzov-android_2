@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/lesson_item_selector"
+        android:paddingBottom="12dp"
+        android:paddingTop="6dp">
+
+        <TextView
+            android:id="@+id/tvLessonType"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginLeft="72dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="ПРАКТИКА"
+            android:textColor="@color/textLabelColor"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:transitionName="tvLessonType" />
+
+        <TextView
+            android:id="@+id/tvSubjectName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tvLessonType"
+            android:layout_marginLeft="72dp"
+            android:layout_marginTop="-4dp"
+            android:layout_toLeftOf="@+id/tvAudience"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="Английский язык"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:transitionName="tvSubjectName" />
+
+        <TextView
+            android:id="@+id/tvSubgroups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tvSubjectName"
+            android:layout_marginLeft="72dp"
+            android:layout_marginRight="16dp"
+            android:ellipsize="end"
+            android:gravity="bottom|right"
+            android:text="12345"
+            android:textColor="@color/blackSecondary"
+            android:textSize="12sp"
+            android:transitionName="tvSubgroups" />
+
+        <TextView
+            android:id="@+id/tvTeacherName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tvSubgroups"
+            android:layout_marginLeft="72dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="-2dp"
+            android:layout_toLeftOf="@+id/tvAudience"
+            android:text="Бурживалова Г.Н."
+            android:textColor="@color/blackSecondary"
+            android:textSize="12sp"
+            android:transitionName="tvTeacherName" />
+
+        <TextView
+            android:id="@+id/tvLessonStartTimeHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tvLessonType"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="-4dp"
+            android:gravity="top"
+            android:text="09"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:transitionName="tvLessonStartTimeHour" />
+
+        <TextView
+            android:id="@+id/tvLessonStartTimeMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLessonType"
+            android:layout_marginTop="-1dp"
+            android:layout_toRightOf="@+id/tvLessonStartTimeHour"
+            android:text="00"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:transitionName="tvLessonStartTimeMin" />
+
+        <TextView
+            android:id="@+id/tvLessonEndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLessonStartTimeHour"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="-2dp"
+            android:text="10.35"
+            android:textColor="@color/timeColor"
+            android:textSize="12sp"
+            android:transitionName="tvLessonEndTime" />
+
+        <TextView
+            android:id="@+id/tvAudience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvLessonType"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:gravity="bottom|right"
+            android:maxLines="2"
+            android:maxWidth="90dp"
+            android:text="409"
+            android:textColor="@color/blackSecondary"
+            android:textSize="12sp"
+            android:transitionName="tvAudience" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

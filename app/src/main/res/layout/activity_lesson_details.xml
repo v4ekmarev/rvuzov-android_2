@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<io.codetail.widget.RevealFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primaryColor">
+
+        <include
+            android:id="@+id/toolbar_actionbar"
+            layout="@layout/toolbar_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar_actionbar">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/lesson_details_rounded_bg"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rlMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp">
+
+                        <TextView
+                            android:id="@+id/tvLessonType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="24dp"
+                            android:layout_marginLeft="72dp"
+                            android:gravity="center_vertical"
+                            android:text="ПРАКТИКА"
+                            android:textColor="@color/textLabelColor"
+                            android:textSize="12sp"
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:textStyle="bold"
+                            android:transitionName="tvLessonType" />
+
+                        <TextView
+                            android:id="@+id/tvSubjectName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tvLessonType"
+                            android:layout_marginLeft="72dp"
+                            android:layout_toLeftOf="@+id/tvAudience"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Английский язык"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:transitionName="tvSubjectName" />
+
+                        <TextView
+                            android:id="@+id/tvLessonStartTimeHour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tvLessonType"
+                            android:layout_marginLeft="16dp"
+                            android:text="09"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:transitionName="tvLessonStartTimeHour" />
+
+                        <TextView
+                            android:id="@+id/tvLessonStartTimeMin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvLessonType"
+                            android:layout_toRightOf="@+id/tvLessonStartTimeHour"
+                            android:text="00"
+                            android:textColor="@android:color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:transitionName="tvLessonStartTimeMin" />
+
+                        <TextView
+                            android:id="@+id/tvLessonEndTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvLessonStartTimeHour"
+                            android:layout_marginLeft="16dp"
+                            android:text="10.35"
+                            android:textColor="@color/timeColor"
+                            android:textSize="12sp"
+                            android:transitionName="tvLessonEndTime" />
+
+                        <TextView
+                            android:id="@+id/tvAudience"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignTop="@+id/tvSubjectName"
+                            android:layout_below="@+id/tvLessonType"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="2dp"
+                            android:ellipsize="end"
+                            android:gravity="bottom|right"
+                            android:maxLines="2"
+                            android:maxWidth="100dp"
+                            android:text="409"
+                            android:textColor="@color/blackSecondary"
+                            android:textSize="14sp"
+                            android:transitionName="tvAudience" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlSubgroupsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"
+                        android:visibility="gone">
+
+                        <View
+                            android:id="@+id/subgroupsDivider"
+                            android:layout_width="wrap_content"
+                            android:layout_height="2dp"
+                            android:background="@color/scheduleDividerColor" />
+
+                        <TextView
+                            android:id="@+id/tvSubgroupsTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:layout_below="@+id/subgroupsDivider"
+                            android:layout_marginLeft="72dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/subgroups_title"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textLabelColor"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvSubgroups"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tvSubgroupsTitle"
+                            android:layout_marginLeft="72dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_toRightOf="@+id/ivSubgroupsIcon"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="1,2,3"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            android:transitionName="tvSubgroups" />
+
+                        <ImageView
+                            android:id="@+id/ivSubgroupsIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:src="@drawable/ic_event_white_24dp"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlTeacherContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:visibility="gone">
+
+                        <View
+                            android:id="@+id/divider"
+                            android:layout_width="wrap_content"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/scheduleDividerColor" />
+
+                        <TextView
+                            android:id="@+id/tvTeacherTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:layout_below="@+id/divider"
+                            android:layout_marginLeft="72dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/teacher_title"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textLabelColor"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvTeacherName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tvTeacherTitle"
+                            android:layout_marginLeft="72dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_toRightOf="@+id/ivScheduleIcon"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="Иванов И.С."
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            android:transitionName="tvTeacherName" />
+
+                        <ImageView
+                            android:id="@+id/ivScheduleIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16dp"
+                            android:src="@drawable/ic_event_white_24dp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llTaskContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <View
+                            android:id="@+id/taskDivider"
+                            android:layout_width="wrap_content"
+                            android:layout_height="2dp"
+                            android:background="@color/scheduleDividerColor" />
+
+                        <TextView
+                            android:id="@+id/tvTaskTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="72dp"
+                            android:layout_marginTop="16dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/task_title"
+                            android:textAllCaps="true"
+                            android:textColor="@color/textLabelColor"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/llTaskList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </ScrollView>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:scaleX="0"
+            android:scaleY="0"
+            app:fab_colorNormal="@color/red"
+            app:fab_colorPressed="@color/red_pressed"
+            app:fab_icon="@drawable/ic_add_white_24dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/accentColor"
+        android:visibility="invisible" />
+
+</io.codetail.widget.RevealFrameLayout>

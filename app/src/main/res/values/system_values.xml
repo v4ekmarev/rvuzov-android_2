@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hockeyapp_id">2a3d42ff237e000b7d2dcb2102a06965</string>
+    <string name="mint_api_key">43101724</string>
+    <string name="flurry_api_key">GGQBN5YBJSHXMFJCBW55</string>
+    <string name="amplitude_api_key">ee745b797ff532d6b9ceebbbd9e546d5</string>
+    <string name="adjust_api_key">g2u4h347a7ls</string>
+    <string name="yandex_metrica_api_key" xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyDashes">c427b462-93ba-47ac-ad64-60dd2e9adba1</string>
+
+</resources>

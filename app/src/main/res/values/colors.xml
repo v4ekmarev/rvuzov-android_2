@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primaryColor">#263238</color>
+    <color name="primaryDarkColor">#1e282d</color>
+    <color name="accentColor">#8fc9ae</color>
+
+    <color name="Black.Transparent.Shadow">#6000</color>
+    <color name="transparent_black">#DD000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="menuColor">#b9f6ca</color>
+    <color name="accentColorPressed">#6F9B86</color>
+
+
+    <color name="disableAds">#07a447</color>
+
+    <color name="weekColor">#fafafa</color>
+    <color name="weekColor2">#ffffff</color>
+    <color name="weekColorPressed">#EEECEC</color>
+
+    <color name="drawerBackground">#FFF</color>
+    <color name="windowBackground">#FFF</color>
+    <color name="textPrimaryColor">#212121</color>
+
+    <color name="navigationColor">#263238</color>
+
+    <color name="pressedGray">#0c000000</color>
+    <color name="selectedGray">#2c000000</color>
+
+    <color name="background">#263238</color>
+    <color name="textLabelColor">#66C8F4</color>
+
+    <color name="taskDayLeftColor">#66C8F4</color>
+
+    <color name="red">#e84545</color>
+    <color name="red_pressed">#C91D1D</color>
+
+    <color name="hintColor">#2c000000</color>
+
+
+    <color name="blackSecondary">#737373</color>
+
+    <color name="blackSecondaryPressed">#616161</color>
+
+
+    <color name="timeColor">#a6a6a6</color>
+
+
+    <color name="scheduleDividerColor">#f7f9ff</color>
+    <color name="greenPressed">#A4D5BE</color>
+    <color name="whitePressed">#f1eded</color>
+
+    <color name="weekendColor">#f0f0f0</color>
+    <color name="weekendColorPressed">#CDCCCB</color>
+    <color name="hot">#ff4343</color>
+    <color name="green">#4CAF50</color>
+
+    <color name="blue">#64b5f6</color>
+    <color name="bluePressed">#4595d6</color>
+
+
+    <color name="gray">#686d70</color>
+    <color name="gray2">#93999c</color>
+    <color name="gray3">#bdbdbd</color>
+    <color name="gray4">#818285</color>
+    
+</resources>
